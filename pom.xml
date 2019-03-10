@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -12,15 +13,16 @@
     <artifactId>spring_boot_study</artifactId>
     <version>1-SNAPSHOT</version>
     <name>spring_boot_study</name>
-    <description>Demo project for Spring Boot</description>
 
     <dependencyManagement>
     </dependencyManagement>
     <modules>
         <module>spring_boot_biz</module>
-        <module>spring_boot_dal</module>
         <module>spring_boot_startup</module>
         <module>spring_boot_web</module>
+        <module>spring_boot_common</module>
+        <module>spring_boot_dal</module>
+        <module>spring_boot_netty</module>
     </modules>
 
 </project>
