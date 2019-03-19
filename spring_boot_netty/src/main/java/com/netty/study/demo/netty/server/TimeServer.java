@@ -3,10 +3,7 @@ package com.netty.study.demo.netty.server;
 import com.netty.study.demo.netty.message.MessageDecoder;
 import com.netty.study.demo.netty.message.MessageEncoder;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelPipeline;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -71,12 +68,19 @@ public class TimeServer {
             System.out.println("EchoServer.main ServerBootstrap配置启动完成");
 
             // Wait until the server socket is closed.
-            f.channel().closeFuture().sync();
+            f.channel().closeFuture().addListener (new ChannelFutureListener () {
+                @Override
+                public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                    // Shut down all event loops to terminate all threads.
+                    bossGroup.shutdownGracefully();
+                    workerGroup.shutdownGracefully();
+                }
+            });
             System.out.println("EchoServer.main end");
         } finally {
             // Shut down all event loops to terminate all threads.
-            bossGroup.shutdownGracefully();
-            workerGroup.shutdownGracefully();
+//            bossGroup.shutdownGracefully();
+//            workerGroup.shutdownGracefully();
         }
     }
 }

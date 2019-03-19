@@ -3,10 +3,7 @@ package com.netty.study.demo.netty.client;
 import com.netty.study.demo.netty.message.MessageDecoder;
 import com.netty.study.demo.netty.message.MessageEncoder;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelPipeline;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -65,15 +62,23 @@ public class TimerClient {
                     });
 
             // Start the client.
-            ChannelFuture f = b.connect(HOST, PORT).sync();
-            System.out.println("EchoClient.main ServerBootstrap配置启动完成");
 
-            // Wait until the connection is closed.
-            f.channel().closeFuture().sync();
+            for (int i = 0; i < 100 ; i++) {
+
+                ChannelFuture f = b.connect(HOST, PORT).sync();
+                System.out.println("EchoClient.main ServerBootstrap配置启动完成");
+
+                // Wait until the connection is closed.
+                f.channel().closeFuture().addListener (new ChannelFutureListener () {
+                    @Override
+                    public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                        group.shutdownGracefully();
+                    }
+                });
+            }
             System.out.println("EchoClient.end");
         } finally {
             // Shut down the event loop to terminate all threads.
-            group.shutdownGracefully();
         }
     }
 
