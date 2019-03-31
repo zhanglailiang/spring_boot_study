@@ -31,7 +31,9 @@
     </dependencies>
 
     <build>
+        <finalName>spring_boot_study</finalName>
         <plugins>
+            <!--打包成可执行jar-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

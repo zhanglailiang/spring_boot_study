@@ -19,6 +19,11 @@
             <artifactId>spring_boot_dal</artifactId>
             <version>1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.spring.boot.study</groupId>
+            <artifactId>spring_boot_api</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
 
 </dependencies>
 

@@ -86,7 +86,6 @@ public class Chapter12Application extends WebSecurityConfigurerAdapter {
                 // 启动http基础验证
                 .and ().httpBasic ();
 
-        http.csrf ().disable ().authorizeRequests ();
     }
 
 
