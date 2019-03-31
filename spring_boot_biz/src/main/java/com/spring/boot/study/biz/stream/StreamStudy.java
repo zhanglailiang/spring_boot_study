@@ -45,7 +45,7 @@ public class StreamStudy {
         // 实现从一组值中生成一个新值
         Integer reduce = collect1.stream ().reduce (0, (acc, ele) -> acc + ele);
 
-
+//        collect1.stream ().sorted ().filter ()
         // 并行化流式处理 比 单式流程不一定好 要看数据量，如果数据量使用单式流程 如果数据量大 使用并发流
 
     }

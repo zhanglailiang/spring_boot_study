@@ -23,6 +23,7 @@
         <module>spring_boot_common</module>
         <module>spring_boot_dal</module>
         <module>spring_boot_netty</module>
+        <module>spring_boot_test</module>
     </modules>
 
 </project>

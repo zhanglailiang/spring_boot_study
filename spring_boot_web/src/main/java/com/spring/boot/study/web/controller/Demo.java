@@ -6,8 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Demo {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/user/hello")
     public String hello() {
+        return "hello";
+    }
+
+
+    @RequestMapping("/admin/hello")
+    public String adminHellolo() {
         return "hello";
     }
 }
