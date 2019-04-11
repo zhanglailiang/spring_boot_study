@@ -21,7 +21,7 @@ class RuleFactoryImpl implements RuleFactory {
         Rule rule = new Rule()
         rule.conditions = [{object, params -> age(object.birthDay) >= params},{object, params -> age(object.birthDay) <= params} ]
         rule.actions=[ {object, param->object. ageCategory = param}]
-        rule parameters=[
+        rule.parameters=[
                     [O , 10, 'Kid '],
                     [11 , 20 ,'Youth '],
                     [21 , 40 ,'Adult '],
