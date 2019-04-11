@@ -12,8 +12,8 @@ public class WebConfigration {
      * web socket配置
      * @return
      */
-    @Bean
-    public ServerEndpointExporter serverEndpointExporter() {
-        return new ServerEndpointExporter ();
-    }
+//    @Bean
+//    public ServerEndpointExporter serverEndpointExporter() {
+//        return new ServerEndpointExporter ();
+//    }
 }
