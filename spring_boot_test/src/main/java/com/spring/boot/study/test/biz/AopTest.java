@@ -6,6 +6,9 @@ import com.spring.boot.study.test.AbstractTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class AopTest extends AbstractTest {
 
     @Autowired
@@ -19,5 +22,18 @@ public class AopTest extends AbstractTest {
         helloService.sayHello("1");
 
         helloService1.sayHello("2");
+
+
+        Integer integer = Integer.valueOf ("01");
+
+        new HashMap<String, String> () {{
+            put ("ad","dd");
+        }};
+
+        new ArrayList<String> (){{
+            add ("11");
+        }};
+
+
     }
 }

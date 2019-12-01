@@ -1,15 +1,5 @@
 package com.spring.boot.study.test;
 
-/*
- * Copyright © 2017 www.lvmama.com
- */
-
-/*
- * 修订记录:
- * @author 钟勋（zhongxun@lvmama.com） 2017-08-21 13:53 创建
- */
-
-
 import com.spring.boot.study.SpringBootStartupApplication;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = SpringBootStartupApplication.class)
 public class AbstractTest {
-    protected static final Logger logger = LoggerFactory.getLogger(AbstractTest.class);
+    protected static final Logger logger = LoggerFactory.getLogger (AbstractTest.class);
 
     static {
         // 设置使用环境

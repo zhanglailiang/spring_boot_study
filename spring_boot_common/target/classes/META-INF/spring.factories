@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.spring.boot.starter.mystarter.HelloServiceAutoConfiguration
+org.springframework.context.ApplicationListener=\
+  com.spring.boot.starter.mystarter.HelloListener

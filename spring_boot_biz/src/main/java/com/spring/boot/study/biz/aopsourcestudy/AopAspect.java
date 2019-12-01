@@ -13,11 +13,11 @@ public class AopAspect {
     @Around("execution (* com.spring.boot.study.biz.aopsourcestudy.HelloService.*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
 
-        System.out.println("begin around");
+        System.out.println ("begin around");
 
-        Object object = point.proceed();
+        Object object = point.proceed ();
 
-        System.out.println("end around");
+        System.out.println ("end around");
 
         return object;
 

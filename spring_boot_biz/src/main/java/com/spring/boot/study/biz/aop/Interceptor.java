@@ -7,5 +7,5 @@ public interface Interceptor {
 
     void after();
 
-    Object around(Invocation  invocation) throws Throwable;
+    Object around(Invocation invocation) throws Throwable;
 }

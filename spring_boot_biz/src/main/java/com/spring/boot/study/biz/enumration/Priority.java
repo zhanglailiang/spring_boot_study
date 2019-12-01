@@ -6,7 +6,7 @@ package com.spring.boot.study.biz.enumration;
  * @author: zhanglailiang
  * @create: 2019-03-19 20:20
  **/
-public enum Priority implements  Command {
+public enum Priority implements Command {
 
     STOP {
         public void execute() {
@@ -31,8 +31,8 @@ public enum Priority implements  Command {
             System.out.println ("stop");
         }
     },
-    
-    
+
+
     ;
 
     public static void main(String[] args) {

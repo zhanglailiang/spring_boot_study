@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "javaboy",
+      "type": "com.spring.boot.starter.mystarter.HelloProperties",
+      "sourceType": "com.spring.boot.starter.mystarter.HelloProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "javaboy.msg",
+      "type": "java.lang.String",
+      "sourceType": "com.spring.boot.starter.mystarter.HelloProperties",
+      "defaultValue": "牧码小子"
+    },
+    {
+      "name": "javaboy.name",
+      "type": "java.lang.String",
+      "sourceType": "com.spring.boot.starter.mystarter.HelloProperties",
+      "defaultValue": "江南一点雨"
+    }
+  ],
+  "hints": []
+}

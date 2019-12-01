@@ -1,0 +1,5 @@
+com\spring\boot\starter\mystarter\HelloService.class
+com\spring\boot\starter\mystarter\HelloProperties.class
+com\spring\boot\starter\mystarter\HelloListener.class
+META-INF\spring-configuration-metadata.json
+com\spring\boot\starter\mystarter\HelloServiceAutoConfiguration.class

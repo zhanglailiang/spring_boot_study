@@ -19,14 +19,14 @@ import org.springframework.context.annotation.Conditional;
 public class ConditionConfig {
 
     @Bean
-    @Conditional (WindowsCondition.class)
-    public ListService windowsListService(){
+    @Conditional(WindowsCondition.class)
+    public ListService windowsListService() {
         return new WindowsListService ();
     }
 
     @Bean
-    @Conditional (LinuxCondition.class)
-    public ListService liunxListService(){
+    @Conditional(LinuxCondition.class)
+    public ListService liunxListService() {
         return new LinuxListService ();
     }
 }

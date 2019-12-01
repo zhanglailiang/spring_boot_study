@@ -14,9 +14,9 @@ public class TestConcurrent {
 
 
     public static void main(String[] args) {
-        testArrayList();
+        testArrayList ();
 
-        tesDelayQueue();
+        tesDelayQueue ();
     }
 
     public static void testArrayList() {
@@ -35,7 +35,7 @@ public class TestConcurrent {
 
 
     public static void tesDelayQueue() {
-        DelayQueue<TimeTask> delayQueue = new DelayQueue<>();
+        DelayQueue<TimeTask> delayQueue = new DelayQueue<> ();
         TimeTask task = new TimeTask ();
         delayQueue.add (task);
         delayQueue.add (task);

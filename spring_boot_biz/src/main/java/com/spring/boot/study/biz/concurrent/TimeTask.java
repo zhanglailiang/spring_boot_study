@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @author: zhanglailiang
  * @create: 2019-03-11 01:25
  **/
-public class TimeTask  implements Delayed {
+public class TimeTask implements Delayed {
 
     private String yy;
 

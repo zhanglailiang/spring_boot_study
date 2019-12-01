@@ -1,2 +1,6 @@
+com\spring\boot\study\web\security\UserDetailServiceImpl.class
 com\spring\boot\study\web\WebConfigration.class
 com\spring\boot\study\web\controller\Demo.class
+com\spring\boot\study\web\webscoket\UserController.class
+com\spring\boot\study\web\security\UserDetailServiceImpl$1.class
+com\spring\boot\study\web\security\Chapter12Application.class

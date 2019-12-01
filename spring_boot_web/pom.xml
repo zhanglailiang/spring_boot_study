@@ -21,10 +21,10 @@
         </dependency>
 
         <!--web flux不能加载该jar 如果加载该注解 ,则spring会加载spring mvc 而不会加载spring flux-->
-       <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
+         </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

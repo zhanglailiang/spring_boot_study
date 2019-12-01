@@ -20,7 +20,7 @@ public class ProxyBean implements InvocationHandler {
     private Interceptor interceptor;
 
     /**
-     * @param target 被代理对象
+     * @param target      被代理对象
      * @param interceptor 拦截器
      * @return
      */
@@ -41,7 +41,7 @@ public class ProxyBean implements InvocationHandler {
         boolean exceptionFlag = false;
         Invocation invocation = new Invocation (tatget, method, args);
         Object retObj = null;
-        if(this.interceptor.before ()) {
+        if (this.interceptor.before ()) {
             retObj = this.interceptor.around (invocation);
         } else {
             retObj = method.invoke (tatget, args);
