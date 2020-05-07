@@ -14,7 +14,7 @@ public class JavassistTest {
 
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IllegalAccessException, InstantiationException, IOException {
         ClassPool cp = ClassPool.getDefault();
-        CtClass cc = cp.get("com.spring.boot.study.biz.stream.Test");
+        CtClass cc = cp.get("com.spring.boot.study.biz.stream.ZookeeperApiDemoApplication");
         CtMethod m = cc.getDeclaredMethod("process");
         m.insertBefore("{ System.out.println(\"start\"); }");
         m.insertAfter("{ System.out.println(\"end\"); }");
